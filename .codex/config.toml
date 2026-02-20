@@ -1,0 +1,27 @@
+# .codex/config.toml — ELIPFORGE multi-agent configuration
+
+[features]
+multi_agent = true
+
+[agents]
+max_threads = 5
+
+[agents.explorer]
+description = "Read-only explorer: map repo, dependencies, commands, risks."
+config_file = "agents/explorer.toml"
+
+[agents.architect]
+description = "Architecture owner: enforces invariants and writes contracts."
+config_file = "agents/architect.toml"
+
+[agents.backend]
+description = "Backend implementer: Laravel migrations, middleware, endpoints, tests."
+config_file = "agents/backend.toml"
+
+[agents.reviewer]
+description = "Security/correctness reviewer."
+config_file = "agents/reviewer.toml"
+
+[agents.frontend]
+description = "Frontend implementer: Panel + Buyer web UI."
+config_file = "agents/frontend.toml"

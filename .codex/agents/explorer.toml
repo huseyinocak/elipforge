@@ -1,0 +1,15 @@
+model = "gpt-5.3-codex-spark"
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+
+developer_instructions = '''
+You are the Explorer agent.
+Scan the repo and output a markdown report with:
+- repository layout
+- backend stack summary (Laravel version, auth packages, queue/cache drivers)
+- frontend stack summary
+- commands to run tests/build/migrations
+- risks: app_id isolation, HMAC auth, missing docs/tests
+
+Do not modify code.
+'''
